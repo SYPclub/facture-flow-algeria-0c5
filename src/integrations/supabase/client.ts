@@ -13,7 +13,7 @@ export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABL
 
 // Transaction functions
 export const beginTransaction = async () => {
-  try {
+  try { 
     return await supabase.rpc('begin_transaction');
   } catch (error) {
     console.error('Error beginning transaction:', error);
